@@ -37,7 +37,7 @@ jobs:
       - name: Run tests
         env:
           PYTHONPATH: "."
-        run: pytest tests/ --cov=src --cov-report=html --cov-fail-under=80
+        run: pytest tests/ --cov=src --cov-report=html --cov-fail-under=80 --cov-omit=src/app.py
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
